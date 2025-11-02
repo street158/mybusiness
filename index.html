@@ -1,4 +1,4 @@
-0<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,36 +8,90 @@
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
     body { background:#f5f5f5; color:#333; }
 
-    header { background:#722f37; color:white; padding:20px 10px; text-align:center; }
+    /* Header */
+    header {
+      background:#722f37;
+      color:white;
+      padding:20px 10px;
+      text-align:center;
+      position: sticky;
+      top:0;
+      z-index: 100;
+    }
     header img { height:60px; margin-bottom:10px; }
 
+    /* Navigation */
     nav { background:#5a2128; text-align:center; padding:10px 0; }
     nav a { color:white; text-decoration:none; padding:10px 15px; display:inline-block; }
     nav a:hover { background:#42171b; border-radius:5px; }
 
-    .hero { 
-      background: url('https://images.unsplash.com/photo-1569220297355-fb2e62f6e21b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; 
-      color:white; text-align:center; padding:80px 20px; 
+    /* Hero section */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1569220297355-fb2e62f6e21b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      color:white;
+      text-align:center;
+      padding:120px 20px;
+      position: relative;
     }
-    .hero h1 { font-size:2.5em; margin-bottom:15px; }
-    .hero p { font-size:1.2em; }
+    .hero h1 { font-size:2.8em; margin-bottom:15px; text-shadow: 2px 2px 6px rgba(0,0,0,0.6); }
+    .hero p { font-size:1.3em; margin-bottom:20px; text-shadow: 1px 1px 4px rgba(0,0,0,0.6); }
+    .hero .cta-button {
+      background:#d43f57;
+      color:white;
+      padding:15px 30px;
+      font-size:1.1em;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      text-decoration:none;
+    }
+    .hero .cta-button:hover { background:#a82e40; }
 
-    section { padding:40px 20px; text-align:center; }
-    .card { background:white; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.1); margin:20px auto; padding:20px; max-width:600px; }
+    /* Sections */
+    section { padding:60px 20px; text-align:center; }
+    section:nth-child(even) { background:#f0e6e6; }
 
-    form input, form textarea { width:90%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
-    form button { padding:10px 20px; background:#722f37; color:white; border:none; border-radius:5px; cursor:pointer; }
+    .card {
+      background:white;
+      border-radius:15px;
+      box-shadow:0 0 15px rgba(0,0,0,0.1);
+      margin:20px auto;
+      padding:30px 20px;
+      max-width:700px;
+    }
+
+    .card h2 { margin-bottom:15px; color:#722f37; }
+
+    /* Buttons */
+    .button {
+      display:inline-block;
+      background:#722f37;
+      color:white;
+      padding:12px 25px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:15px;
+    }
+    .button:hover { background:#5a2128; }
+
+    /* Contact form */
+    form input, form textarea { width:90%; padding:12px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
+    form button { padding:12px 25px; background:#722f37; color:white; border:none; border-radius:8px; cursor:pointer; }
     form button:hover { background:#5a2128; }
 
-    #social a { color:#722f37; text-decoration:none; margin:0 5px; }
+    /* Social links */
+    #social a { color:#722f37; text-decoration:none; margin:0 8px; }
     #social a:hover { text-decoration:underline; }
 
-    footer { background:#722f37; color:white; text-align:center; padding:20px 10px; font-size:0.9em; }
+    footer { background:#722f37; color:white; text-align:center; padding:25px 10px; font-size:0.9em; }
 
+    /* Mobile responsive */
     @media(max-width:600px){
       .hero h1 { font-size:2em; }
-      .card { width:95%; padding:15px; }
+      .card { width:95%; padding:20px; }
       nav a { padding:8px 10px; }
+      .hero .cta-button { padding:12px 25px; font-size:1em; }
     }
   </style>
 </head>
@@ -59,23 +113,25 @@
 <section class="hero">
   <h1>Shaping the Leaders of Tomorrow</h1>
   <p>Excellence in education, character, and leadership.</p>
+  <a href="#admission" class="cta-button">Apply Now</a>
 </section>
 
 <section id="about">
   <div class="card">
     <h2>About Us</h2>
-    <p>Future Leaders Academy provides holistic education, nurturing young minds to achieve academic excellence and leadership skills.</p>
+    <p>Future Leaders Academy provides a holistic education, nurturing young minds to achieve academic excellence, leadership skills, and personal growth. Our vision is to produce future leaders who positively impact society.</p>
   </div>
 </section>
 
 <section id="programs">
   <div class="card">
     <h2>Our Programs</h2>
-    <ul style="list-style:none; line-height:1.8;">
-      <li>📚 Academic Classes</li>
-      <li>🎯 Leadership & Life Skills</li>
-      <li>🎨 Arts & Creativity Clubs</li>
+    <ul style="list-style:none; line-height:1.8; text-align:left; max-width:500px; margin:0 auto;">
+      <li>📚 Academic Classes (Primary & Secondary)</li>
+      <li>🎯 Leadership & Life Skills Training</li>
+      <li>🎨 Arts, Music & Creativity Clubs</li>
       <li>🏀 Sports & Extracurricular Activities</li>
+      <li>🌍 Community Service Programs</li>
     </ul>
   </div>
 </section>
@@ -83,12 +139,14 @@
 <section id="admission">
   <div class="card">
     <h2>Admission</h2>
+    <p>Enrollment is open year-round. Follow these steps to join Future Leaders Academy:</p>
     <ol style="text-align:left; max-width:500px; margin:0 auto; line-height:1.8;">
       <li>Fill out the admission form.</li>
       <li>Submit previous academic records.</li>
       <li>Attend interview/orientation.</li>
       <li>Receive confirmation and start classes.</li>
     </ol>
+    <a href="#contact" class="button">Contact Admission</a>
   </div>
 </section>
 
