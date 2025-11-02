@@ -5,109 +5,125 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Street Legacy Enterprise</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f3f3f3;
-      color: #333;
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif; }
+    body { background:#f5f5f5; color:#333; }
+
+    /* Header */
     header {
-      background: #0a74da;
+      background: #1a73e8;
       color: white;
       padding: 20px 10px;
       text-align: center;
     }
-    nav {
-      background: #084d9e;
-      text-align: center;
-      padding: 10px 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 10px 15px;
-      display: inline-block;
-    }
-    nav a:hover {
-      background: #0a74da;
-      border-radius: 5px;
-    }
+    header img { height: 60px; margin-bottom: 10px; }
+
+    /* Navigation */
+    nav { background: #1558b0; text-align:center; padding: 10px 0; }
+    nav a { color: white; text-decoration:none; padding: 10px 15px; display:inline-block; }
+    nav a:hover { background: #0f3e8c; border-radius: 5px; }
+
+    /* Hero section */
     .hero {
       background: url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
+      color:white;
+      text-align:center;
+      padding:80px 20px;
     }
-    .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
-    .hero p { font-size: 1.1em; }
-    section {
-      padding: 40px 20px;
-      text-align: center;
-    }
+    .hero h1 { font-size:2.5em; margin-bottom:15px; }
+    .hero p { font-size:1.1em; }
+
+    /* Sections */
+    section { padding:40px 20px; text-align:center; }
     .card {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 500px;
+      background:white;
+      border-radius:15px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+      margin:20px auto;
+      padding:20px;
+      max-width:500px;
     }
-    footer {
-      background: #0a74da;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9em;
+
+    /* Contact form */
+    form input, form textarea { width:90%; padding:10px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
+    form button { padding:10px 20px; background:#1a73e8; color:white; border:none; border-radius:5px; cursor:pointer; }
+    form button:hover { background:#1558b0; }
+
+    /* Social links */
+    #social a { color:#1a73e8; text-decoration:none; margin:0 5px; }
+    #social a:hover { text-decoration:underline; }
+
+    /* Footer */
+    footer { background:#1a73e8; color:white; text-align:center; padding:20px 10px; font-size:0.9em; }
+
+    /* Mobile friendly */
+    @media(max-width:600px){
+      .hero h1 { font-size:2em; }
+      .card { width:95%; padding:15px; }
+      nav a { padding:8px 10px; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Street Legacy Enterprise</h1>
-    <p>Quality • Trust • Innovation</p>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <!-- Placeholder logo -->
+  <img src="https://via.placeholder.com/150x60?text=Logo" alt="Street Legacy Logo">
+  <h1>Street Legacy Enterprise</h1>
+  <p>Quality • Trust • Innovation</p>
+</header>
 
-  <section class="hero">
-    <h1>We Help Your Business Grow</h1>
-    <p>Professional solutions for modern entrepreneurs.</p>
-  </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section id="about">
-    <div class="card">
-      <h2>About Us</h2>
-      <p>Street Legacy Enterprise is dedicated to delivering reliable business solutions that empower small and medium businesses to thrive in today’s digital world.</p>
-    </div>
-  </section>
+<section class="hero">
+  <h1>We Help Your Business Grow</h1>
+  <p>Professional solutions for modern entrepreneurs.</p>
+</section>
 
-  <section id="services">
-    <div class="card">
-      <h2>Our Services</h2>
-      <ul style="list-style:none; line-height:1.8;">
-        <li>🌐 Web Development</li>
-        <li>📱 Digital Marketing</li>
-        <li>🧠 AI-Powered Tools</li>
-        <li>🎨 Brand Design</li>
-      </ul>
-    </div>
-  </section>
+<section id="about">
+  <div class="card">
+    <h2>About Us</h2>
+    <p>Street Legacy Enterprise delivers reliable business solutions that empower small and medium businesses to thrive in today’s digital world.</p>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="card">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:streetlegacy@gmail.com">streetlegacy@gmail.com</a></p>
-      <p>Phone: +233 XX XXX XXXX</p>
-      <p>Location: Accra, Ghana</p>
-    </div>
-  </section>
+<section id="services">
+  <div class="card">
+    <h2>Our Services</h2>
+    <ul style="list-style:none; line-height:1.8;">
+      <li>🌐 Web Development</li>
+      <li>📱 Digital Marketing</li>
+      <li>🧠 AI-Powered Tools</li>
+      <li>🎨 Brand Design</li>
+    </ul>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Street Legacy Enterprise — All Rights Reserved.
-  </footer>
+<section id="contact">
+  <div class="card">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/mayvzkqw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required><br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+      <textarea name="message" placeholder="Your Message" required></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<section id="social">
+  <h3>Follow Us</h3>
+  <a href="https://facebook.com" target="_blank">Facebook</a> |
+  <a href="https://twitter.com" target="_blank">Twitter</a> |
+  <a href="https://instagram.com" target="_blank">Instagram</a>
+</section>
+
+<footer>
+  &copy; 2025 Street Legacy Enterprise — All Rights Reserved.
+</footer>
+
 </body>
 </html>
